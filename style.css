@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,7 +30,7 @@ body {
   visibility: hidden;
 }
 #title-screen {
-  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -44,8 +44,8 @@ body {
   align-items: center;
 }
 #game-title {
-  top: 21%;
-  right: 45%;
+  top: 15%;
+  right: 31%;
   position: absolute;
   width: 320px;
 }
@@ -70,13 +70,13 @@ body {
   position: absolute;
   right: 64.5%;
   bottom: 41.5%;
-  width: 75px;
+  width: 175px;
 }
 .demon_Right {
   position: absolute;
   left: 53.5%;
   bottom: 41%;
-  width: 75px;
+  width: 175px;
 }
 #zToJump_Start {
   position: absolute;
@@ -167,7 +167,7 @@ body {
   right: 45%;
 }
 #game-over-screen {
-  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -200,6 +200,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+
+
 #canvas {
   border: 1px solid black;
   position: absolute;
@@ -212,7 +215,7 @@ body {
   border-radius: 10px;
 }
 .first-background{
-  background-image: url("./docs/assets/images/pixelart.jpg");
+  background-image: url("./deadpool/deadpool (1).gif");
 }
 .bk_tv {
   background-repeat: no-repeat;
@@ -246,25 +249,24 @@ body {
     border-radius: 10px;
   }
   #game-title {
-    top: 22%;
-    right: 40%;
-    width: 120px;
+   
+    width: 250px;
   }
   #jump {
     top: 29%;
-    right: 48%;
-    font-size: 16px;
+    right: 45%;
+    font-size: 32px;
   }
   #title-button {
     top: 45%;
-    right: 37%;
-    font-size: 14px;
+    right: 32%;
+    font-size: 24px;
   }
   #zToJump_Start {
     top: 60%;
     right: 35%;
-    left: 34%;
-    font-size: 14px;
+    left: 17%;
+    font-size: 20px;
   }
   .demon_Left {
     right: 53%;
@@ -272,17 +274,17 @@ body {
     width: 0px;
   }
   .demon_Right {
-    left: 39%;
+    left: 22%;
     bottom: 56%;
-    width: 35px;
+    
   }
   body {
-    background-image: url('./docs/assets/images/tv_nobg.jpg');
+    background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
   }
   #title-screen {
-    background-image: url('./docs/assets/images/tv_nobg.jpg');
+    background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
     background-repeat: no-repeat;
     background-size: 0px;
     position: absolute;
@@ -296,14 +298,14 @@ body {
     align-items: center;
   }
   .level_P {
-    top: 24%;
-    right: 38%;
-    font-size: 14px;
+    top: 18%;
+    right: 36%;
+    font-size: 20px;
   }
   #btn-normal {
     top: 36%;
-    left: 31%;
-    font-size: 14px;
+    left: 28%;
+    font-size: 18px;
   }
   #btn-upsideDown {
     top: 51%;
@@ -312,35 +314,35 @@ body {
   }
   #btn-dustin {
     top: 36%;
-    left: 32%;
-    font-size: 14px;
+    left: 22%;
+    font-size: 20px;
   }
   #btn-hopper {
     top: 55%;
-    right: 46%;
-    font-size: 14px;
+    right: 42%;
+    font-size: 20px;
     text-align: center;
   }
   .dustin_Left_Level {
-    left: 39%;
+    left: 22%;
     bottom: 64%;
-    width: 34px;
+    width: 154px;
   }
   .hopper_Right_Level {
-    width: 28px;
+    width: 108px;
     bottom: 45%;
-    right: 53%;
+    right: 47%;
   }
   #zToJump_Level {
     top: 64%;
     right: 35%;
-    left: 34%;
+    left: 17%;
     font-size: 14px;
   }
   .demon_Left_Level {
-    left: 40%;
-    bottom: 65%;
-    width: 35px;
+    left: -4%;
+    bottom: 63%;
+    width: 355px;
   }
   .demon_Right_Level {
     transform: rotate(180deg);
@@ -349,7 +351,7 @@ body {
     right: 53%;
   }
   #game-over-screen {
-    background-image: url('./docs/assets/images/tv_nobg.jpg');
+    background-image: url('./deadpool/tv_nobg_fotor_2024080823333_V1 (online-video-cutter.com).gif');
     background-repeat: no-repeat;
     background-size: 0px;
     position: absolute;
@@ -365,22 +367,22 @@ body {
   #game-over {
     font-size: 38px;
     position: absolute;
-    top: 25%;
-    right: 63%;
+    top: 15%;
+    right: 69%;
     width: 35px;
   }
   .try-again-button {
     position: absolute;
     font-size: 18px;
-    top: 43%;
-    right: 41%
+    top: 26%;
+    right: 49%
   }
   #restart-button {
     position: absolute;
-    top: 48%;
+    top: 30%;
     right: 52%;
-    width: 35px;
-    border-radius: 10px;
+    width: 95px;
+    border-radius: 15px;
   }
   #highScores {
     display: flex;
@@ -389,8 +391,12 @@ body {
     text-align: center;
     position: absolute;
     line-height: 4.5vh;
-    top: 52vh;
-    right: 40vw;
+    top: 39vh;
+    right: 44vw;
+  }
+  #join{
+    top: 39vh;
+    right: 44vw;
   }
 }
 
@@ -643,4 +649,16 @@ body {
           right: 39vw;
           font-size: 22px;
         }
+}
+
+@media screen and (max-width: 768px) {
+  #btn-hper {
+      top: 65%;
+      right: 52%;
+      font-size: 20px;
+      text-align: center;
+      position:absolute;
+
+  }
+
 }

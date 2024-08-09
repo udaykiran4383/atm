@@ -26,11 +26,7 @@ normalButton.onclick = () => {
     playerScreen.classList.toggle('hidden');
     upsideDown = false;
 };
-upsideDownButton.onclick = () => {
-    levelsScreen.classList.toggle('hidden');
-    playerScreen.classList.toggle('hidden');
-    upsideDown = true;
-};
+
 hopperButton.onclick = () => {
     if(!upsideDown) {
         playerScreen.classList.toggle('hidden');
@@ -139,40 +135,61 @@ function update() {
     /* ctx.font = "20px Benguiat Bold"; */
 
     /* Highscore */
-    let highScore1 = localStorage.getItem("highScore1");
-    let highScore2 = localStorage.getItem("highScore2");
-    let highScore3 = localStorage.getItem("highScore3");
+// Initializing high scores and levels from localStorage or setting them to 0 if they don't exist
+let highScore1 = parseFloat(localStorage.getItem("highScore1")) || 0;
+let highScore2 = parseFloat(localStorage.getItem("highScore2")) || 0;
+let highScore3 = parseFloat(localStorage.getItem("highScore3")) || 0;
 
-    let highLevel1 = localStorage.getItem("highLevel1");
-    let highLevel2 = localStorage.getItem("highLevel2");
-    let highLevel3 = localStorage.getItem("highLevel3");
+let highLevel1 = parseFloat(localStorage.getItem("highLevel1")) || 0;
+let highLevel2 = parseFloat(localStorage.getItem("highLevel2")) || 0;
+let highLevel3 = parseFloat(localStorage.getItem("highLevel3")) || 0;
 
-    
-    let highScoreElement1 = document.getElementById("highScore1");
-    let highScoreElement2 = document.getElementById("highScore2");
-    let highScoreElement3 = document.getElementById("highScore3");
+let highScoreElement1 = document.getElementById("highScore1");
+let highScoreElement2 = document.getElementById("highScore2");
+let highScoreElement3 = document.getElementById("highScore3");
 
-    
+function updateHighScores(score, levels) {
+    if (score > highScore1 || (score === highScore1 && levels > highLevel1)) {
+        // Shift lower scores down
+        highScore3 = highScore2;
+        highLevel3 = highLevel2;
+        highScore2 = highScore1;
+        highLevel2 = highLevel1;
+
+        // Update top score
+        highScore1 = score;
+        highLevel1 = levels;
+    } else if (score > highScore2 || (score === highScore2 && levels > highLevel2)) {
+        // Shift lower scores down
+        highScore3 = highScore2;
+        highLevel3 = highLevel2;
+
+        // Update second score
+        highScore2 = score;
+        highLevel2 = levels;
+    } else if (score > highScore3 || (score === highScore3 && levels > highLevel3)) {
+        // Update third score
+        highScore3 = score;
+        highLevel3 = levels;
+    }
+
+    // Update localStorage with new high scores and levels
+    localStorage.setItem("highScore1", highScore1);
+    localStorage.setItem("highLevel1", highLevel1);
+    localStorage.setItem("highScore2", highScore2);
+    localStorage.setItem("highLevel2", highLevel2);
+    localStorage.setItem("highScore3", highScore3);
+    localStorage.setItem("highLevel3", highLevel3);
+
+    // Update the displayed high scores
     highScoreElement1.innerHTML = Math.round(highScore1) + " on level " + highLevel1;
     highScoreElement2.innerHTML = Math.round(highScore2) + " on level " + highLevel2;
     highScoreElement3.innerHTML = Math.round(highScore3) + " on level " + highLevel3;
+}
 
-    if(score > highScore1) {
-        localStorage.setItem("highScore1", score);
-        if(levels > highLevel1) {
-            localStorage.setItem("highLevel1", levels);
-          } 
-      } else if(score > highScore2) {
-        localStorage.setItem("highScore2", score);
-        if(levels > highLevel2) {
-            localStorage.setItem("highLevel2", levels);
-          } 
-      } else if(score > highScore3) {
-        localStorage.setItem("highScore3", score);
-        if(levels > highLevel3) {
-            localStorage.setItem("highLevel3", levels);
-          }
-      }
+// Call updateHighScores at the appropriate place in your game loop, after calculating the score and level
+updateHighScores(score, levels);
+
 
 
     if(!upsideDown) {
@@ -259,64 +276,60 @@ function update() {
         if (spawnTimer < 150) {
             spawnDemon = true;
             spawnTimer = 150;
-            
-            if(frames > 250) {
+    
+            if (frames > 250) {
                 spawnTimer = 125;
-                
-            } 
-            if(frames > 500) {
-                spawnTimer = 100;
-                levels = 2
+                levels = Math.max(levels, 2); // Ensures levels don't decrease
                 spawn2Bat = true;
             }
-            if(frames > 1000) {
+            if (frames > 500) {
+                spawnTimer = 100;
+                levels = Math.max(levels, 3);
                 spawnDemon = false;
                 spawnDog = true;
-                spawnTimer = 90
-                levels = 3
             }
-            if(frames > 1500) {
-                spawnTimer = 80
-                levels = 4
+            if (frames > 1000) {
+                spawnTimer = 90;
+                levels = Math.max(levels, 4);
                 spawn2Bat = false;
             }
-            if(frames > 2000) {
-                spawnDog = false;
+            if (frames > 1500) {
+                spawnTimer = 80;
+                levels = Math.max(levels, 5);
                 spawnSlim = true;
-                spawnTimer = 70
-                levels = 5
-            } 
-            if(frames > 2500) {
+            }
+            if (frames > 2000) {
+                spawnTimer = 70;
+                levels = Math.max(levels, 6);
+            }
+            if (frames > 2500) {
                 spawnTimer = 60;
-                levels = 6
+                levels = Math.max(levels, 7);
+                spawn2Bat = true;
             }
-            if(frames > 3000) {
-                spawnSlim = false;
-                spawnObst = true;
+            if (frames > 3000) {
                 spawnTimer = 55;
-                levels = 7
-                spawn2Bat = true;
-            }
-            if(frames > 5000) {
-                spawnObst = false;
-                spawnDog = true;
-                spawnTimer = 50;
-                levels = 8
-                spawn2Bat = false;
-            }
-            if(frames > 6666) {
+                levels = Math.max(levels, 8);
                 spawnDog = false;
+                spawnObst = true;
+            }
+            if (frames > 5000) {
+                spawnTimer = 50;
+                levels = Math.max(levels, 9);
+                spawn2Bat = false;
                 spawnDemon = true;
+            }
+            if (frames > 6666) {
                 spawnTimer = 45;
-                levels = 666
+                levels = Math.max(levels, 10);
                 spawn2Bat = true;
             }
-            if(frames > 9999) {
+            if (frames > 9999) {
                 spawnTimer = 40;
-                levels = 999
+                levels = Math.max(levels, 11);
             }
-        };
-    };
+        }
+    }
 
     for (let i = 0; i < obstacles.length; i++) {
         let demon = obstacles[i];

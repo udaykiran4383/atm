@@ -1,0 +1,14 @@
+
+
+@font-face {
+    font-family: 'Avengers.ttf';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avengers.ttf'), url('Avengers.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avengers 3D.ttf';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avengers 3D.ttf'), url('Avengers 3D.woff') format('woff');
+}

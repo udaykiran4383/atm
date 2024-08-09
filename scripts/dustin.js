@@ -19,21 +19,21 @@ class Dustin {
       const img8 = new Image();
   
       img1.addEventListener("load", () => {})
-      img1.src = "./docs/assets/images/dustin/dust1.png";
+      img1.src = "./deadpool/final-0001-removebg-preview.png";
       img2.addEventListener("load", () => {})
-      img2.src = "./docs/assets/images/dustin/dust2.png";
+      img2.src = "./deadpool/final-0002-removebg-preview.png";
       img3.addEventListener("load", () => {})
-      img3.src = "./docs/assets/images/dustin/dust3.png";
+      img3.src = "./deadpool/final-0003-removebg-preview.png";
       img4.addEventListener("load", () => {})
-      img4.src = "./docs/assets/images/dustin/dust4.png";
+      img4.src = "./deadpool/final-0004-removebg-preview.png";
       img5.addEventListener("load", () => {})
-      img5.src = "./docs/assets/images/dustin/dust5.png";
+      img5.src = "./deadpool/final-0012-removebg-preview.png";
       img6.addEventListener("load", () => {})
-      img6.src = "./docs/assets/images/dustin/dust6.png";
+      img6.src = "./deadpool/final-0013-removebg-preview.png";
       img7.addEventListener("load", () => {})
-      img7.src = "./docs/assets/images/dustin/dust7.png";
+      img7.src = "./deadpool/final-0014-removebg-preview.png";
       img8.addEventListener("load", () => {})
-      img8.src = "./docs/assets/images/dustin/dust8.png";
+      img8.src = "./deadpool/final-0015-removebg-preview.png";
   
       this.img = img1;
       this.images = [img1, img2, img3, img4, img5, img6, img7, img8]

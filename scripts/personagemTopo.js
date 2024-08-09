@@ -19,15 +19,15 @@ class Player2 {
     const img8 = new Image();
 
     img1.addEventListener("load", () => {})
-    img1.src = "./docs/assets/images/player_frames_img/img_player_1_top.png";
+    img1.src = "./deadpool/output-onlinegiftools (1).gif";
     img2.addEventListener("load", () => {})
-    img2.src = "./docs/assets/images/player_frames_img/img_player_2_top.png";
+    img2.src = "./deadpool/wolv.png";
     img3.addEventListener("load", () => {})
-    img3.src = "./docs/assets/images/player_frames_img/img_player_3_top.png";
+    img3.src = "./deadpool/wolv.png";
     img4.addEventListener("load", () => {})
-    img4.src = "./docs/assets/images/player_frames_img/img_player_4_top.png";
+    img4.src = "./deadpool/wolv.png";
     img5.addEventListener("load", () => {})
-    img5.src = "./docs/assets/images/player_frames_img/img_player_5_top.png";
+    img5.src = "./deadpool/wolv.png";
     img6.addEventListener("load", () => {})
     img6.src = "./docs/assets/images/player_frames_img/img_player_6_top.png";
     img7.addEventListener("load", () => {})

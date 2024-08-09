@@ -2,7 +2,7 @@ class Player {
   constructor(x, y, width, height) {
     this.x = x;
     this.y = y;
-    this.width = width;
+    this.width = width* 1.5;
     this.height = height;
     this.speedY = 0;
     this.jumpForce = 16;
@@ -19,21 +19,21 @@ class Player {
     const img8 = new Image();
 
     img1.addEventListener("load", () => {})
-    img1.src = "./docs/assets/images/player_frames_img/img_player_1.png";
+    img1.src = "./deadpool/w1.png";
     img2.addEventListener("load", () => {})
-    img2.src = "./docs/assets/images/player_frames_img/img_player_2.png";
+    img2.src = "./deadpool/w2.png";
     img3.addEventListener("load", () => {})
-    img3.src = "./docs/assets/images/player_frames_img/img_player_3.png";
+    img3.src = "./deadpool/w3.png";
     img4.addEventListener("load", () => {})
-    img4.src = "./docs/assets/images/player_frames_img/img_player_4.png";
+    img4.src = "./deadpool/w5.png";
     img5.addEventListener("load", () => {})
-    img5.src = "./docs/assets/images/player_frames_img/img_player_5.png";
+    img5.src = "./deadpool/w6.png";
     img6.addEventListener("load", () => {})
-    img6.src = "./docs/assets/images/player_frames_img/img_player_6.png";
+    img6.src = "./deadpool/w7.png";
     img7.addEventListener("load", () => {})
-    img7.src = "./docs/assets/images/player_frames_img/img_player_7.png";
+    img7.src = "./deadpool/w2.png";
     img8.addEventListener("load", () => {})
-    img8.src = "./docs/assets/images/player_frames_img/img_player_8.png";
+    img8.src = "./deadpool/w8.png";
 
     this.img = img1;
     this.images = [img1, img2, img3, img4, img5, img6, img7, img8]
